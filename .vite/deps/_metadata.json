@@ -1,0 +1,85 @@
+{
+  "hash": "167d0f35",
+  "configHash": "6944d4e3",
+  "lockfileHash": "35e4bd5c",
+  "browserHash": "24991cbf",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "b4726609",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f2aeba65",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "35b01481",
+      "needsInterop": true
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "217f57b8",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "e7a62c99",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "e86adcd4",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "0ca7523b",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "49dd6f9a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "hls-AE33N3ZI": {
+      "file": "hls-AE33N3ZI.js"
+    },
+    "vision_bundle-EJYKSMNM": {
+      "file": "vision_bundle-EJYKSMNM.js"
+    },
+    "chunk-MYHIP5LU": {
+      "file": "chunk-MYHIP5LU.js"
+    },
+    "chunk-6OBH27UN": {
+      "file": "chunk-6OBH27UN.js"
+    },
+    "chunk-RZSASJON": {
+      "file": "chunk-RZSASJON.js"
+    },
+    "chunk-JNVIEDKQ": {
+      "file": "chunk-JNVIEDKQ.js"
+    },
+    "chunk-JX5S4TE2": {
+      "file": "chunk-JX5S4TE2.js"
+    },
+    "chunk-TWJRYSII": {
+      "file": "chunk-TWJRYSII.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
+    }
+  }
+}

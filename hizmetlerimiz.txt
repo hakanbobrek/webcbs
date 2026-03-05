@@ -1,0 +1,158 @@
+MOBİL UYGULAMA GELİŞTİRME
+''7 / 24 Kesintisiz Hizmet, artık Cep Telefonunuz kadar yakın''
+
+ETKİLEYİCİ VE KULLANIŞLI ''MOBİL BELEDİYE'' UYGULAMASI
+Mosk Bilişim Teknolojileri olarak, iOS ve Android platformlarındaki mobil cihazlarda belediyeler için geliştirdiğimiz ‘’Mobil Belediyecilik Uygulaması’’ ile vatandaşlara verilen hizmeti tanıtmak ve daha iyi hale getirmek artık daha kolay.
+
+Mobil Belediyecilik hizmetini geliştirirken, dilerseniz kullanmakta olduğunuz e – belediye sistemlerini de entegre edebiliyoruz ve bu sayede mükellefler kurum ödemelerini dahi cep telefonlarından ya da tabletlerinden 7 / 24 istedikleri zaman yapabiliyorlar.
+
+Hayata geçirdiğimiz Belediyelerimizde, ‘’Mobil Belediye’’ uygulamamız vatandaşlar tarafından büyük bir memnuniyet ve beğeni ile karşılanmış olup, yoğun olarak kullanılmaktadır.
+
+Mobil Belediyecilik Uygulamasının sağladığı avantajlardan bahsetmek gerekir ise;
+
+Öncelikli olarak taşınabilir cihazlar üzerinde çalıştığı için, her yerde ve her zaman kullanılabilmektedir. Bu sayede Vatandaşlar ile Belediye arasındaki iletişimi mekândan bağımsız hale getirir.
+
+Özel olarak tasarlanan mobil ara yüz ile kullanımı son derece kolaydır ve kullanılma oranı oldukça yüksektir.
+
+Belediyelerin Vatandaşlarına hizmetlerini, projelerini, haberlerini, etkinliklerini, duyurularını sunma ve vatandaşların beklentilerini öğrenme imkânı sunar.   Diğer yandan vatandaşlar ise kurumdan beklentilerini iletme, ödemelerini gerçekleştirme, kurum hizmetlerinden bilgi sahibi olabilmenin yanında bu uygulama sayesinde kurumdan isteklerini, şikayetlerini ve önerilerini de bildirebilmektedirler.
+
+Kolay kullanım için özel olarak geliştirilmiş bir kullanıcı ara yüzü sunan ‘’Mobil Belediyecilik Uygulaması’’ Başkan, E-belediye, İstek-Şikâyet, Haberler, Etkinlikler, Hizmetler, Duyurular, Anket, İstek-Şikâyet, Çek Gönder, Nöbetçi Eczane, Yol Tarifi ve oldukça önemli olan Bildirim ve Profil Ana menülerinden oluşuyor. Uygulama Ana menüsünde ayrıca belediyenin bölgeye ait hava durumu bilgileri de görüntülenebiliyor. Mobil uygulama üzerinden tek tıkla belediyenin İletişim Merkezi ile telefon görüşmesi de sağlayan uygulamada, Vatandaşlar tek tıkla belediye hizmet binası için harita destekli yol tarifi de alabiliyorlar.
+
+ 
+
+ANALİZ
+TASARIM
+KODLAMA
+TEST&TEST
+TESLİM&BAKIM
+MOBİL UYGULAMA GELİŞTİRME SÜRECİMİZ
+Mobil Uygulama Geliştirme Süreci, müşteri ziyaretleri ile başlar. Gereksinimleriniz doğru tespitler ile şekillenir ve projenin iş planı oluşturulur. Bir sonraki adım kullanıcı dostu ve görsel yeterliliğe sahip tasarım aşamasıdır. Sonrasında ise hayallerimizi kodlara aktarmaya başlarız. Beta sürümünün ortaya çıkması ile birlikte detaylı testler yapılır, çıkan hatalar giderilir, tekrar tekrar test edilir, ta ki uygulama tüm testlerden başarı ile geçene kadar. Sonrası ise en önem verdiğimiz kısımdır. Yerinde eğitim ve kesintisiz destek. Bizler biliyoruz ki müşteri memnuniyeti, ürettiğimiz ürünlerimizi taçlandıran en önemli unsurdur.
+
+YAZILIM GELİŞTİRME
+'' Hayal Et, Tasarla, Öne Çıkar''
+
+WEB TABANLI YAZILIM GELİŞTİRME
+Yazılım geliştirme süreçlerinde uluslararası standartlarda müşterilerimizin ihtiyaçları doğrultusunda şekillenen çözümler üretiyoruz. Geliştirdiğimiz yazılımları bir ürün olarak değil sürdürülebilir proje olarak değerlendiriyoruz. Basit adımlar ile hizmetlerimizi gerçekleştirirken, ilk aşama işin kapsamı ve planlanmasıdır. Ön analiz sonucuna göre yazılım çıktıları, müşteri beklentileri, kullanıcı dostu arayüz tasarımı, kodlama ve testler yapılmaktadır. Her aşamada belgelendirme ve bilgilendirme yaparak paydaşlarımızı işin içerisine dâhil ederek çalışıyoruz. Yazılımın kullanıldığı süreç içerisinde müşteri ihtiyaçlarının farklılaşması, işin yapılış şeklinin değişmesi, donanım yükseltilmesi gibi nedenlerden dolayı bakım ve garanti süresi boyunca kullanıcılara kesintisiz destek/eğitim veriyoruz.
+
+Metodoloji
+Gereksinim Analizi
+Kodlama
+Modül Test
+Birleştirme
+Test ve Hata Ayıklama
+Teslim ve Destek
+Geliştirme
+Coğrafi Bilgi Sistemleri (CBS-GIS)
+'' Planlanabilir bir gelecek için CBS''
+
+CBS ANALİZ, KURULUM VE BAKIM
+Uluslararası standartlarda ve ihtiyaçlarınıza özel, geliştirilebilir arayüze sahip açık kaynak kodlu sistemler kuruyoruz. Performans kriterlerini göz önünde bulundurarak kullanıcı dostu Coğrafi Bilgi Sistemleri kurulumu gerçekleştiriyoruz. Sürdürülebilir ve Yönetilebilir Sistemler kurarak, kurumların uzun yıllar ihtiyaçlarını karşılayabilecekleri ve zaman içerisinde ihtiyaç duyabilecekleri geliştirmeleri yapabilecekleri modellemeler yapıyoruz.
+
+ Verilerinizin Analizi ve Düzenlenmesi,
+İlişkisel Veri Tabanı Yönetim Sistemi Tasarımı
+Verilerin Aktarılması ve Düzenlenmesi
+Coğrafi Sunucu Tasarımı ve Kurulumu
+Altlık Verilerinin Hazırlanması ve Entegrasyonu
+Coğrafi Sunucu Tasarımı ve Kurulumu
+Arayüzlerin Tasarımı ve Geliştirilmesi
+ Teslim, Bakım ve Destek, Danışmanlık
+ 
+WEB TASARIM & GELİŞTİRME
+'' Özgün Teknolojik Tasarımlar''
+
+WEB TASARIM & GELİŞTİRME
+Mosk Bilişim Teknolojileri olarak, firmanızın kurumsal kimliğine uygun, özgün, kullanıcı dostu ve yenilikçi tasarımlar ile sizlere ihtiyaçlarınız doğrultusunda çözümler üretiyoruz. Tasarım ve kodlamanın tüm adımlarında sizlerle birlikte etkileşimli olarak ve proje planı doğrultusunda adım adım ilerleyerek çalışıyoruz. Konusunda uzman ve deneyimli yazılım ekibimizle projenin her etabında tarafınızdan yazılı onay alarak ilerliyor ve proje teslim onayı ile birlikte ister kendi sunucularınızda, ister bizim sunucularımızda portalınızı yayına alıyoruz. Devamında ise firma kültürümüz olan ‘’ Müşteri memnuniyeti’’ kapsamında kesintisiz destek sağlıyoruz.
+
+Tanışma ve beklentilerin tespiti
+Proje planı
+Ana sayfa tasarım süreci
+Arayüz geliştirme süreci
+Yönetim paneli geliştirilmesi
+İçerik giriş ve test aşaması
+Müşteri onay süreci
+Yayına alma
+
+VERİ MADENCİLİĞİ
+"Verilere kulak verin, doğru kararlar alın."
+
+VERİ MADENCİLİĞİ
+Kamu Kurumları ve Belediyeler her gün artan veri kümelerini sistemlerinde saklarlar. Eğer yıllar içerisinde üretilmiş bu veri kümeleri doğru analiz edilir ve belirli algoritmalarla oluşturulmuş ve doğru kurgulanmış yazılım sistemlerinde rafine hale getirilir ise kurumlar için kazanımları paha biçilemez düzeyde olmaktadır.
+
+Kamu Kurumları ve Belediyeler gündelik işlemlerini gerçekleştirmekte ve bu işlere ait raporlamalarını yapabilmektedir. Fakat geçmişe ait verilerin, geleceğe yönelik değerlendirilmesi kaynakların, planlamaların, kayıp ve kaçakların tespit edilebilerek doğru bir projeksiyon sunabilmesi ‘’Veri Madenciliği’’ algoritmaları ve teknikleri ile mümkündür.
+
+Mosk Bilişim olarak uzun yıllar kamu sektöründe edindiğimiz tecrübeler ve birçok projemizde yaşadığımız deneyimlerimiz ile geliştirdiğimiz Akıllı Yazılım Araçlarımız ile böylesine büyük veri kümelerine sahip Kamu Kurumları ve Belediyelerde kaynakların doğru kullanılması, doğru planlamaların yapılması ve pasif kaynakların ortaya çıkarılmasına katkıda bulunuyoruz.
+
+Doğru ve güncel veri ile doğru kararların alınabileceği, doğru yatırımların yapılabileceğini çok iyi biliyoruz. Diğer yandan ülke olarak hedeflediğimiz ‘’Geleceğin Kentleri’’ ya da ‘’Akıllı Şehir’’ kavramlarının hayal olmaktan çıkmasının ancak doğru veriler ile alınacak kararlar ve planlamalar üzerine kurulabileceğinin bilincindeyiz.
+
+Verilerin Analizi
+Yorumlanması ve Hazırlanması
+Dış Kurum Verilerinin Analizi
+Saha verilerinin toplanması
+Veriler arası Entegrasyonların yapılması
+Akıllı Araçlar ile Veri Çakıştırılması
+Proje Sonuç Raporları
+Sistem Güncelleme Mekanızması Kurulumu
+DANIŞMANLIK
+''Birlikte Yaratacağımız İşbirliği ve Sinerji''
+
+DANIŞMANLIK HİZMETLERİMİZ
+Edindiğimiz tecrübeler ışığında Kamu Kurumları ve Belediyelere Yönetim Bilgi Sistemleri, Coğrafi Bilgi Sistemleri, Bilişim Yatırımları ve Saha Projeleri konularında anahtar teslim çözümlerimizin yanında Profesyonel Danışmanlık Hizmetleri de vermekteyiz.
+
+Kurumların yatırım süreçlerinden başlayarak, geleceği karşılayabilecek teknolojilerin seçiminden, projelerinin hayata geçirilmesine ve proje sürekliliğinin sağlanmasına kadar bütün süreçlerde deneyimlerimizi profesyonel bakış açısı ile destekleyerek hizmet sunuyoruz.
+
+Tüm bu hizmetlerimizi, alanında uzman,  üst seviyede yetkin ve bir çok benzer proje deneyimi ile kendi geliştirmiş ekibimiz ile sağlıyoruz.
+
+Kurumsal Danışmanlık
+Teknik Danışmanlık
+Proje Bazlı Danışmanlık
+Bilişim Yatırım Danışmanlığı
+CBS Bazlı İş ve Teknik Danışmanlık
+CBS Bazlı İş Süreç Danışmanlığı
+Proje Bazlı Saha Operasyon Danışmanlığı
+Teknik Uzman Danışmanlığı
+GELİR ARTIRICI PROJELER (GAÇ)
+''Vergi de Adaleti Sağlamak''
+
+VERGİ KAYIP KAÇAK TESPİTİ
+Belediyelerin Hizmet Sınırları içresinde bulunan taşınmazlara ve bunlar ile ilişkili mevzuatta vergiye tabi diğer unsurlar için, nitelikli ve güncel veri ilk şarttır. Bu veriler ışığında yasalarımızın ön gördüğü şekilde vergi tahakkuklarını ve tahsilatlarını gerçekleştirmek kurumun en temel sorumluluğudur.
+
+Diğer yandan vergisini nizami ve zamanında ödeyen mükellefler olduğu gibi, hiç beyanda bulunmamış, yani potansiyel kaçak veya eksik beyanda bulunmuş, yani nitelik kaçağı durumunda olan mükelleflerde bulunmaktır. Belediyeler sorumlulukları gereği kaçak yada nitelik kaçağı durumundaki mükellefleri tespit ve kayıt işlemlerini yapmak ile yükümlü olup diğer yandan vergide adalet kavramını hayata geçirmekle yükümlüdürler.
+
+KAZANIMLAR
+
+Vergi kayıp ve kaçaklarının tespiti ve önüne geçilmesini sağlayacak kalıcı bir sistem ve güncelleme yapısı kurulması
+Belediyelerin mevzuat gereği toplamakla yükümlü oldukları gelirlerinin ‘’Vergide Adalet’’ yaklaşımı ile artırılması
+Kurum verilerinin kontrol ve analizi
+Veri hazırlama ve güncel bilgilerin tespit edilmesi
+Tapu verilerin ilişkilendirilmesi
+Kayıp Kaçak Beyan Tespitleri
+Tapu Servisleri ile entegrasyon
+Kurum veritabanı güncelleme
+Projeye ait raporların sunulması
+Bakım, Destek ve Danışmanlık Hizmetleri
+
+AKILLANDIRMA / SAYISALLAŞTIRMA HİZMETLERİ
+''Gelecek İçin Akıllı Kentler''
+
+COĞRAFİ BİLGİ SİSTEMLERİ ( GIS ) VE VERİ AKILLANDIRMA
+Coğrafi Bilgi Sistemi; Sosyal, Ekonomik, Çevresel vb. konulara yönelik, konuma dayalı karar verme süreçlerinde kullanıcılara yardımcı olmak için, büyük hacimli coğrafi verilerin toplanması, depolanması, işlenmesi, yönetimi, mekansal analizi, sorgulaması ve sunulması fonksiyonlarını yerine getiren donanım, yazılım, personel, coğrafi veri ve yöntem bütünüdür.
+
+Coğrafi Bilgi Sistemlerinin; Analiz, Sorgu, Sunum gibi Karar Destek yeteneğine sahip olabilmesi akıllandırılmış veri ile mümkün olmaktadır. Verilerin belirli disiplinler ile akıllandırılması Coğrafi Bilgi Sistemlerinin temel unsurudur.
+
+Coğrafi Bilgi Sistemlerinde Akıllı Veri; Coğrafi (grafik) Veri ve Coğrafi olmayan (grafik olmayan) veri arasında bağlantının kurularak grafik verinin tanımlanabilir, sorgulanabilir, raporlanabilir özetle karar destek unsuru olarak kullanılabilen veridir.
+
+YARARLARI
+
+İş verimliliğini arttırır.
+Etkili ve doğru analiz sağlar.İş gücü ve zaman kaybını önler.
+Karar destek sitemlerine bilgi sağlar.
+Sözel veriler ile Mekansal verilerin ilişkilenmesini.
+Yöneticilere anlık ve uzun vadeli karar verme süreçlerinde destek sunar.
+ Kadastral Veri Akıllandırılması
+ İmar Plan Veri Akıllandırılması
+ Halihazır Veri Akıllandırılması
+ Altyapı Veri Akıllandırılması
+ Numarataj Veri Akıllandırılması
+ Fen İşleri Veri Akıllandırılması
+Fotogrametrik Veri Akıllandırılması
+Metinsel Veri Akıllandırılması

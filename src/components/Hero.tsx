@@ -1,18 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Activity, Users, Zap, Move3d, Hand, MoveHorizontal } from 'lucide-react';
-import { CityScene } from './CityScene';
 import { useTheme } from '../context/ThemeContext';
 
-export const Hero = () => {
-  const { isDark } = useTheme();
+const CityScene = React.lazy(() => import('./CityScene'));
 
+const Hero = () => {
+  const { isDark } = useTheme();
+  
+  // Use Intersection Observer to only load the heavy 3D scene when near viewport
+  // Though Hero is at top, this helps defer it slightly during initial bundle parse
+  // Or we can just use Suspense fallback
+  
   return (
     <div className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-slate-50 dark:bg-mosk-dark transition-colors duration-700 font-sans">
       
       {/* Full Screen 3D Background */}
       <div className="absolute inset-0 z-0">
-         <CityScene />
+         <React.Suspense fallback={<div className="w-full h-full bg-slate-50" />}>
+            <CityScene />
+         </React.Suspense>
       </div>
 
       {/* Creative Gradient Overlay - Provides readability without a box */}
@@ -21,7 +28,7 @@ export const Hero = () => {
         absolute inset-0 z-0 pointer-events-none transition-colors duration-700
         bg-gradient-to-r 
         ${isDark 
-          ? 'from-mosk-dark via-mosk-dark/80 to-transparent' 
+          ? 'from-white/90 via-white/80 to-transparent' 
           : 'from-slate-50 via-slate-50/90 to-transparent'}
         w-[90%] md:w-[70%] lg:w-[60%]
       `} />
@@ -91,16 +98,16 @@ export const Hero = () => {
             </motion.div>
 
             {/* Headline */}
-            <h1 className={`font-display text-glow text-[48px] md:text-[72px] lg:text-[88px] font-extrabold leading-[1.05] mb-8 ${isDark ? 'text-white' : 'text-slate-900'} pointer-events-auto select-none`}>
+            <h1 className={`font-display text-glow text-[48px] md:text-[72px] lg:text-[88px] font-extrabold leading-[1.05] mb-8 ${isDark ? 'text-slate-900' : 'text-slate-900'} pointer-events-auto select-none`}>
               Akıllı Şehirler <br />
               <span className={`relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-mosk-orange via-orange-500 to-amber-500 font-serif italic tracking-wide`}>
                 Akıllı Çözümler
-                <span className={`${isDark ? 'bg-mosk-orange/20' : 'bg-orange-200/50'} absolute -inset-1 blur-xl rounded-full -z-10`}></span>
+                <span className={`${isDark ? 'bg-orange-200/50' : 'bg-orange-200/50'} absolute -inset-1 blur-xl rounded-full -z-10`}></span>
               </span>
             </h1>
 
             {/* Description */}
-            <p className={`text-lg md:text-2xl mb-12 max-w-xl leading-relaxed font-light ${isDark ? 'text-slate-300' : 'text-slate-600'} pointer-events-auto select-none`}>
+            <p className={`text-lg md:text-2xl mb-12 max-w-xl leading-relaxed font-light ${isDark ? 'text-slate-600' : 'text-slate-600'} pointer-events-auto select-none`}>
               Konumsal dijitalleşmenin öncüsü olarak, <strong className="font-semibold text-mosk-orange">CBS</strong> ve mühendislik çözümleriyle yarını şekillendiriyor, bugünü kolaylaştırıyoruz.
             </p>
 
@@ -192,3 +199,5 @@ export const Hero = () => {
     </div>
   );
 };
+
+export default Hero;

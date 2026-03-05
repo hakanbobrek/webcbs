@@ -1,86 +1,79 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import referencePlaceholder from '../assets/reference-placeholder.png';
+import SectionDivider from './SectionDivider';
+import { useTheme } from '../context/ThemeContext';
 
-// Categories
-const categories = [
-  "TÜMÜ",
-  "AKILLANDIRMA/SAYISALLAŞTIRMA",
-  "CBS",
-  "DANIŞMANLIK",
-  "CAÇ",
-  "MOBİL UYGULAMA",
-  "SAYISALLAŞTIRMA"
-];
+interface Reference {
+  id: number;
+  title: string;
+  logoUrl: string;
+  categories: { id: number; name: string; slug: string }[];
+}
 
-// Sample References Data (5 items per category effectively)
-const references = [
-  // AKILLANDIRMA/SAYISALLAŞTIRMA
-  { id: 1, title: "Gebze Belediyesi", category: "AKILLANDIRMA/SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 2, title: "Gebze Belediyesi", category: "AKILLANDIRMA/SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 3, title: "Gebze Belediyesi", category: "AKILLANDIRMA/SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 4, title: "Gebze Belediyesi", category: "AKILLANDIRMA/SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 5, title: "Gebze Belediyesi", category: "AKILLANDIRMA/SAYISALLAŞTIRMA", image: referencePlaceholder },
-  
-  // CBS
-  { id: 6, title: "Gebze Belediyesi", category: "CBS", image: referencePlaceholder },
-  { id: 7, title: "Gebze Belediyesi", category: "CBS", image: referencePlaceholder },
-  { id: 8, title: "Gebze Belediyesi", category: "CBS", image: referencePlaceholder },
-  { id: 9, title: "Gebze Belediyesi", category: "CBS", image: referencePlaceholder },
-  { id: 10, title: "Gebze Belediyesi", category: "CBS", image: referencePlaceholder },
+interface Category {
+  id: number;
+  name: string;
+  slug: string;
+}
 
-  // DANIŞMANLIK
-  { id: 11, title: "Gebze Belediyesi", category: "DANIŞMANLIK", image: referencePlaceholder },
-  { id: 12, title: "Gebze Belediyesi", category: "DANIŞMANLIK", image: referencePlaceholder },
-  { id: 13, title: "Gebze Belediyesi", category: "DANIŞMANLIK", image: referencePlaceholder },
-  { id: 14, title: "Gebze Belediyesi", category: "DANIŞMANLIK", image: referencePlaceholder },
-  { id: 15, title: "Gebze Belediyesi", category: "DANIŞMANLIK", image: referencePlaceholder },
+const ReferencesSection = () => {
+  const { isDark } = useTheme();
+  const [selectedCategory, setSelectedCategory] = useState<string>("TÜMÜ");
+  const [references, setReferences] = useState<Reference[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // CAÇ
-  { id: 16, title: "Gebze Belediyesi", category: "CAÇ", image: referencePlaceholder },
-  { id: 17, title: "Gebze Belediyesi", category: "CAÇ", image: referencePlaceholder },
-  { id: 18, title: "Gebze Belediyesi", category: "CAÇ", image: referencePlaceholder },
-  { id: 19, title: "Gebze Belediyesi", category: "CAÇ", image: referencePlaceholder },
-  { id: 20, title: "Gebze Belediyesi", category: "CAÇ", image: referencePlaceholder },
-
-  // MOBİL UYGULAMA
-  { id: 21, title: "Gebze Belediyesi", category: "MOBİL UYGULAMA", image: referencePlaceholder },
-  { id: 22, title: "Gebze Belediyesi", category: "MOBİL UYGULAMA", image: referencePlaceholder },
-  { id: 23, title: "Gebze Belediyesi", category: "MOBİL UYGULAMA", image: referencePlaceholder },
-  { id: 24, title: "Gebze Belediyesi", category: "MOBİL UYGULAMA", image: referencePlaceholder },
-  { id: 25, title: "Gebze Belediyesi", category: "MOBİL UYGULAMA", image: referencePlaceholder },
-
-  // SAYISALLAŞTIRMA
-  { id: 26, title: "Gebze Belediyesi", category: "SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 27, title: "Gebze Belediyesi", category: "SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 28, title: "Gebze Belediyesi", category: "SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 29, title: "Gebze Belediyesi", category: "SAYISALLAŞTIRMA", image: referencePlaceholder },
-  { id: 30, title: "Gebze Belediyesi", category: "SAYISALLAŞTIRMA", image: referencePlaceholder },
-];
-
-export const ReferencesSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState("TÜMÜ");
-  const [showAll, setShowAll] = useState(false);
-
-  // Reset showAll when category changes
   useEffect(() => {
-    setShowAll(false);
-  }, [selectedCategory]);
+    const fetchData = async () => {
+      try {
+        const [refsRes, catsRes] = await Promise.all([
+          axios.get('http://localhost:3001/api/references'),
+          axios.get('http://localhost:3001/api/reference-categories')
+        ]);
+        setReferences(refsRes.data);
+        setCategories(catsRes.data);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const filteredReferences = selectedCategory === "TÜMÜ" 
-    ? references 
-    : references.filter(ref => ref.category === selectedCategory);
+    fetchData();
+  }, []);
 
-  const displayedReferences = showAll 
-    ? filteredReferences 
-    : filteredReferences.slice(0, 10);
+  // Filter references
+  const filteredReferences = selectedCategory === "TÜMÜ"
+    ? references
+    : references.filter(ref => ref.categories.some(c => c.name === selectedCategory));
 
-  const hasMore = filteredReferences.length > 10;
+  // Limit to 10 for homepage
+  const displayedReferences = filteredReferences.slice(0, 10);
+  
+  if (loading) return null;
 
   return (
-    <section className="py-24 bg-white dark:bg-zinc-900 transition-colors duration-300">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] relative overflow-hidden transition-colors duration-500">
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Large Glowing Orbs */}
+        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-mosk-orange/5 rounded-full blur-[120px] mix-blend-screen animate-pulse -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] mix-blend-screen animate-pulse translate-x-1/3 translate-y-1/3 delay-1000"></div>
+        
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-mosk-orange/20 rounded-full blur-3xl animate-bounce duration-[10000ms]"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-bounce duration-[8000ms] delay-500"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-16">
@@ -88,42 +81,51 @@ export const ReferencesSection: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block"
+            className="inline-block relative"
           >
-            <h2 className="text-4xl font-bold text-mosk-dark dark:text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Referans<span className="text-mosk-orange">larımız</span>
             </h2>
-            <div className="h-1 w-24 bg-mosk-orange mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-mosk-orange rounded-full mx-auto shadow-lg shadow-mosk-orange/50"></div>
           </motion.div>
-          <p className="mt-4 text-mosk-grey dark:text-gray-400 max-w-2xl mx-auto">
-            Türkiye'nin dört bir yanında, teknolojimizle değer kattığımız kurumlar.
+          <p className="mt-6 text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed font-medium">
+            Türkiye'nin dört bir yanında, teknolojimizle değer kattığımız seçkin kurumlar.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category, index) => (
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
+          <button
+            onClick={() => setSelectedCategory("TÜMÜ")}
+            className={`
+              px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 border backdrop-blur-md
+              ${selectedCategory === "TÜMÜ"
+                ? 'bg-mosk-orange text-white border-mosk-orange shadow-lg shadow-mosk-orange/40 transform scale-105'
+                : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:border-mosk-orange/50 hover:text-white'
+              }
+            `}
+          >
+            TÜMÜ
+          </button>
+          {categories.map((category) => (
             <button
-              key={index}
-              onClick={() => setSelectedCategory(category)}
+              key={category.id}
+              onClick={() => setSelectedCategory(category.name)}
               className={`
-                px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border
-                ${selectedCategory === category
-                  ? 'bg-mosk-orange border-mosk-orange text-white shadow-lg shadow-mosk-orange/30 transform scale-105'
-                  : 'bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-400 hover:border-mosk-orange hover:text-mosk-orange'
+                px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 border backdrop-blur-md
+                ${selectedCategory === category.name
+                  ? 'bg-mosk-orange text-white border-mosk-orange shadow-lg shadow-mosk-orange/40 transform scale-105'
+                  : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:border-mosk-orange/50 hover:text-white'
                 }
               `}
             >
-              {category}
+              {category.name}
             </button>
           ))}
         </div>
 
         {/* Grid */}
-        <motion.div 
-          layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <AnimatePresence mode='popLayout'>
             {displayedReferences.map((ref) => (
               <motion.div
@@ -132,52 +134,54 @@ export const ReferencesSection: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-                className="group relative bg-white dark:bg-mosk-dark border border-slate-100 dark:border-zinc-800 rounded-xl p-6 flex items-center justify-center hover:shadow-xl hover:border-mosk-orange/30 transition-all duration-300"
+                transition={{ duration: 0.4 }}
+                className="group relative bg-white rounded-2xl p-6 flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-mosk-orange/20 transition-all duration-500 aspect-square overflow-hidden"
               >
-                <div className="relative w-full aspect-square flex items-center justify-center overflow-hidden">
+                {/* Glow Effect behind logo */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-mosk-orange/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative w-full h-full flex items-center justify-center z-10 p-4">
                   <img 
-                    src={ref.image} 
+                    src={ref.logoUrl || referencePlaceholder} 
                     alt={ref.title} 
-                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
+                    className="max-w-full max-h-full object-contain transition-all duration-500 transform group-hover:scale-110 drop-shadow-sm"
                   />
                 </div>
                 
                 {/* Tooltip on Hover */}
-                <div className="absolute inset-0 bg-mosk-orange/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col items-center justify-center p-4 text-center">
-                  <h4 className="text-white font-bold text-lg mb-1">{ref.title}</h4>
-                  <span className="text-white/80 text-xs uppercase tracking-wider">{ref.category}</span>
+                <div className="absolute inset-0 bg-mosk-orange/90 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-4 text-center z-20 backdrop-blur-sm translate-y-4 group-hover:translate-y-0">
+                  <h4 className="text-white font-bold text-lg mb-2 drop-shadow-md">{ref.title}</h4>
+                  <span className="inline-block px-3 py-1 rounded-full bg-black/20 text-white text-[10px] font-bold uppercase tracking-wider border border-white/20">
+                    {ref.categories.map(c => c.name).join(', ')}
+                  </span>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
-
-        {/* Show All Button */}
-        {hasMore && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex justify-center mt-12"
-          >
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="flex items-center gap-2 px-8 py-3 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-full text-mosk-secondary dark:text-white font-bold shadow-lg hover:shadow-xl hover:border-mosk-orange hover:text-mosk-orange transition-all duration-300"
-            >
-              {showAll ? (
-                <>
-                  Daha Az Göster <ChevronUp size={18} />
-                </>
-              ) : (
-                <>
-                  Tümünü Gör ({filteredReferences.length - 10} daha) <ChevronDown size={18} />
-                </>
-              )}
-            </button>
-          </motion.div>
+        </div>
+        
+        {filteredReferences.length === 0 && (
+          <div className="text-center py-20 text-slate-400 text-lg">
+            Bu kategoride referans bulunamadı.
+          </div>
         )}
+
+        {/* View All Button */}
+        <div className="flex justify-center mt-16">
+          <Link
+            to="/references"
+            className="group relative flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-mosk-orange rounded-full text-white font-bold overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.5)]"
+          >
+            <span className="absolute inset-0 w-full h-full bg-mosk-orange transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+            <span className="relative z-10 flex items-center gap-2">
+              Tüm Referansları Gör ({references.length}) <ChevronDown size={20} className="-rotate-90 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </Link>
+        </div>
 
       </div>
     </section>
   );
 };
+
+export default ReferencesSection;

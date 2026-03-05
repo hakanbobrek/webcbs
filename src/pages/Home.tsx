@@ -1,9 +1,9 @@
 import React from 'react';
-import { Navbar } from '@/components/Navbar';
-import { Hero } from '@/components/Hero';
-import { AboutSection } from '@/components/AboutSection';
-import { ServicesSection } from '@/components/ServicesSection';
-import { WhyUsSection } from '@/components/WhyUsSection';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import AboutSection from '@/components/AboutSection';
+import ServicesSection from '@/components/ServicesSection';
+import WhyUsSection from '@/components/WhyUsSection';
 
 export default function Home() {
   return (
