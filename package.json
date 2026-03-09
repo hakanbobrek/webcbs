@@ -14,9 +14,6 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    
-  "express": "^4.19.0",
-
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^9.0.0",
     "@dnd-kit/sortable": "^10.0.0",
@@ -28,6 +25,7 @@
     "@types/three": "^0.160.0",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "framer-motion": "^12.34.0",
     "jodit-react": "^5.3.21",
