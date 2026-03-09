@@ -9,7 +9,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite preview --port $PORT --host",
     "check": "tsc -b --noEmit",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
