@@ -25,6 +25,7 @@
     "@types/three": "^0.160.0",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "express": "^5.2.1",
     "framer-motion": "^12.34.0",
     "jodit-react": "^5.3.21",
     "leaflet": "^1.9.4",
